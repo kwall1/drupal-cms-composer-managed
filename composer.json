@@ -1,5 +1,6 @@
 {
     "name": "drupal/cms",
+    "version": "1.0.1",
     "description": "Drupal with a bunch of useful stuff.",
     "type": "project",
     "license": "GPL-2.0-or-later",
@@ -20,29 +21,33 @@
     },
     "require": {
         "composer/installers": "^2.3",
-        "drupal/core-composer-scaffold": "^11.1",
-        "drupal/core-project-message": "^11.1",
-        "drupal/core-recommended": "^11.1",
-        "drupal/drupal_cms_accessibility_tools": "~1.0.0-rc2",
-        "drupal/drupal_cms_ai": "~1.0.0-rc2",
-        "drupal/drupal_cms_analytics": "~1.0.0-rc2",
-        "drupal/drupal_cms_blog": "~1.0.0-rc2",
-        "drupal/drupal_cms_case_study": "~1.0.0-rc2",
-        "drupal/drupal_cms_events": "~1.0.0-rc2",
-        "drupal/drupal_cms_forms": "~1.0.0-rc2",
-        "drupal/drupal_cms_news": "~1.0.0-rc2",
-        "drupal/drupal_cms_person": "~1.0.0-rc2",
-        "drupal/drupal_cms_project": "~1.0.0-rc2",
-        "drupal/drupal_cms_seo_tools": "~1.0.0-rc2",
-        "drupal/drupal_cms_starter": "~1.0.0-rc2",
+        "drupal/core-composer-scaffold": "^11.1.1",
+        "drupal/core-project-message": "^11.1.1",
+        "drupal/core-recommended": "^11.1.1",
+        "drupal/drupal_cms_accessibility_tools": "~1.0.0",
+        "drupal/drupal_cms_ai": "~1.0.1",
+        "drupal/drupal_cms_analytics": "~1.0.0",
+        "drupal/drupal_cms_blog": "~1.0.0",
+        "drupal/drupal_cms_case_study": "~1.0.0",
+        "drupal/drupal_cms_events": "~1.0.0",
+        "drupal/drupal_cms_forms": "~1.0.0",
+        "drupal/drupal_cms_news": "~1.0.1",
+        "drupal/drupal_cms_page": "~1.0.0",
+        "drupal/drupal_cms_person": "~1.0.1",
+        "drupal/drupal_cms_project": "~1.0.0",
+        "drupal/drupal_cms_seo_tools": "~1.0.1",
+        "drupal/drupal_cms_starter": "~1.0.0",
+        "drupal/pantheon_advanced_page_cache": "^2.3.1",
+        "drupal/project_browser": "@alpha",
+        "drupal/webform": "@beta",
         "drush/drush": "^13",
-        "pantheon-systems/drupal-integrations": "^11",
+        "pantheon-systems/drupal-integrations": "^11.1",
         "pantheon-upstreams/upstream-configuration": "dev-main"
     },
     "conflict": {
         "drupal/drupal": "*"
     },
-    "minimum-stability": "alpha",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
@@ -55,11 +60,13 @@
             "phpstan/extension-installer": true
         },
         "sort-packages": true,
-        "optimize-autoloader": true
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "8.3.14"
+        }
     },
     "extra": {
         "drupal-scaffold": {
-            "allowed-packages": ["pantheon-systems/drupal-integrations"],
             "file-mapping": {
                 "[project-root]/.editorconfig": false,
                 "[project-root]/pantheon.upstream.yml": false,
@@ -93,7 +100,6 @@
                 "<bg=blue;fg=white>                                                   </>",
                 "",
                 "<bg=yellow;fg=black>Next steps</>:",
-                "  * Run <fg=yellow>./launch-drupal-cms.sh</> to initialize Drupal CMS and open it in a browser.",
                 "  * Read the user guide: https://www.drupal.org/docs/user_guide/en/index.html",
                 "  * Get support: https://drupal.org/support",
                 "  * Get involved with the Drupal community: https://drupal.org/getting-involved"
